@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard — LegacyLock</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         DASHBOARD NAVBAR
+         ========================= -->
+
+    <header class="dashboard-navbar">
+
+        <a href="dashboard.html" class="dashboard-logo">
+
+            <img
+                src="logo.png"
+                alt="LegacyLock Logo"
+            >
+
+        </a>
+
+
+        <div class="dashboard-actions">
+
+            <button
+                id="dashboard-theme-toggle"
+                class="dashboard-theme-toggle"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                ☾
+            </button>
+
+            <button
+                id="logout-btn"
+                class="logout-btn"
+                type="button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+         ========================= -->
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+
+            <p class="dashboard-eyebrow">
+                YOUR LEGACYLOCK
+            </p>
+
+            <h1>
+                Welcome back, <span id="user-name">User</span>.
+            </h1>
+
+            <p>
+                Keep your digital life organized and your legacy prepared.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OVERVIEW CARDS
+             ========================= -->
+
+        <section class="overview-grid">
+
+            <div class="overview-card">
+
+                <div class="overview-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Protected Assets
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <div class="overview-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Last Check-in
+                    </span>
+
+                    <strong>
+                        Not set
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <div class="overview-icon">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Inactivity Period
+                    </span>
+
+                    <strong>
+                        Not set
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-card">
+
+                <div class="overview-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Trusted Contact
+                    </span>
+
+                    <strong>
+                        Not set
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK ACTIONS
+             ========================= -->
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-section-heading">
+
+                <div>
+
+                    <p class="dashboard-eyebrow">
+                        MANAGE YOUR LEGACY
+                    </p>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions-grid">
+
+                <a href="vault.html" class="dashboard-action-card">
+
+                    <i class="fa-solid fa-vault"></i>
+
+                    <div>
+
+                        <h3>
+                            Digital Vault
+                        </h3>
+
+                        <p>
+                            Organize your important digital assets.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+                <a href="documents.html" class="dashboard-action-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <div>
+
+                        <h3>
+                            Documents
+                        </h3>
+
+                        <p>
+                            Manage important documents and records.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+                <a href="passwords.html" class="dashboard-action-card">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <div>
+
+                        <h3>
+                            Passwords
+                        </h3>
+
+                        <p>
+                            Keep track of your digital credentials.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+
+                <a href="memories.html" class="dashboard-action-card">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <div>
+
+                        <h3>
+                            Memories
+                        </h3>
+
+                        <p>
+                            Preserve memories that matter to you.
+                        </p>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEGACY PLAN
+             ========================= -->
+
+        <section class="legacy-plan-card">
+
+            <div>
+
+                <p class="dashboard-eyebrow">
+                    LEGACY PLAN
+                </p>
+
+                <h2>
+                    Your handover plan isn't configured yet.
+                </h2>
+
+                <p>
+                    Choose a trusted contact, define your inactivity period,
+                    and decide what should be included in your legacy plan.
+                </p>
+
+            </div>
+
+
+            <a href="legacy-plan.html" class="primary-btn">
+                Set Up Legacy Plan
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
