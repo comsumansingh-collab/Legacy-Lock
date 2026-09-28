@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Vault — LegacyLock</title>
+
+    <link rel="stylesheet" href="vault.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="dashboard-navbar">
+
+        <a href="dashboard.html" class="dashboard-logo">
+
+            <img
+                src="logo.png"
+                alt="LegacyLock Logo"
+            >
+
+        </a>
+
+        <div class="dashboard-actions">
+
+            <a href="dashboard.html" class="logout-btn">
+                Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+
+            <p class="dashboard-eyebrow">
+                DIGITAL VAULT
+            </p>
+
+            <h1>
+                Your Digital Assets
+            </h1>
+
+            <p>
+                Organize the digital information you want to preserve
+                as part of your legacy.
+            </p>
+
+        </section>
+        <div class="vault-form">
+
+    <h2>Add Digital Asset</h2>
+
+    <input
+        type="text"
+        id="asset-name"
+        placeholder="Asset name"
+    >
+
+    <button
+        class="primary-btn"
+        type="button"
+    >
+        Add Asset
+    </button>
+
+    </div>
+
+
+        <section class="quick-actions-grid">
+
+            <div class="dashboard-action-card">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <div>
+
+                    <h3>
+                        Documents
+                    </h3>
+
+                    <p>
+                        Important documents and records.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-action-card">
+
+                <i class="fa-solid fa-key"></i>
+
+                <div>
+
+                    <h3>
+                        Passwords
+                    </h3>
+
+                    <p>
+                        Digital credentials and account information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-action-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <div>
+
+                    <h3>
+                        Identity
+                    </h3>
+
+                    <p>
+                        Important identity-related information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-action-card">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <div>
+
+                    <h3>
+                        Memories
+                    </h3>
+
+                    <p>
+                        Photos, memories and personal notes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div id="asset-list"></div>
+        
+    </main>
+
+
+    <script src="vault.js"></script>
+
+</body>
+
+</html>
