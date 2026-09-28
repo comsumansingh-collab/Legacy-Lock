@@ -1,0 +1,504 @@
+/* =========================================================
+   LEGACYLOCK — MAIN STYLESHEET
+   ========================================================= */
+
+/* =========================
+   ROOT VARIABLES
+   ========================= */
+
+:root {
+    --navy: #081120;
+    --navy-light: #101b2d;
+    --navy-soft: #162238;
+
+    --gold: #c9a227;
+    --gold-light: #e0c45b;
+
+    --white: #ffffff;
+    --light: #f8f9fb;
+    --gray: #697386;
+    --gray-light: #e5e8ee;
+
+    --green: #18b368;
+
+    --border: rgba(8, 17, 32, 0.10);
+
+    --shadow: 0 20px 50px rgba(8, 17, 32, 0.10);
+    --shadow-dark: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    --radius: 18px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+
+.login-btn {
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--navy);
+
+    border-radius: 8px;
+
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+    background: var(--light);
+}
+
+
+/* Primary Button */
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background: var(--navy);
+    color: var(--white);
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border: 1px solid var(--navy);
+
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+
+    color: var(--navy);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(201, 162, 39, 0.25);
+}
+
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.dashboard-navbar {
+    height: 78px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid rgba(8, 17, 32, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dashboard-logo img {
+    width: 155px;
+    height: auto;
+    display: block;
+}
+
+.dashboard-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-theme-toggle,
+.logout-btn {
+    border: 1px solid rgba(8, 17, 32, 0.12);
+    background: transparent;
+    color: #081120;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.dashboard-theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.dashboard-theme-toggle:hover {
+    color: #c9a227;
+    border-color: #c9a227;
+}
+
+.logout-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    background: #081120;
+    color: #ffffff;
+}
+
+
+
+
+
+        /* =========================
+           LEGACY PLAN PAGE
+           ========================= */
+
+        .legacy-page {
+            min-height: calc(100vh - 78px);
+            padding: 65px 7% 90px;
+            background: #f8f9fb;
+        }
+
+        .legacy-page-header {
+            max-width: 800px;
+            margin-bottom: 45px;
+        }
+
+        .legacy-page-header h1 {
+            color: #081120;
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .legacy-page-header p:last-child {
+            color: #667085;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .legacy-form {
+            max-width: 900px;
+        }
+
+        .legacy-card {
+            margin-bottom: 22px;
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid rgba(8, 17, 32, 0.08);
+            border-radius: 18px;
+        }
+
+        .legacy-card-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 25px;
+        }
+
+        .legacy-card-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 11px;
+            background: rgba(201, 162, 39, 0.10);
+            color: #c9a227;
+        }
+
+        .legacy-card-heading h2 {
+            color: #081120;
+            font-size: 21px;
+        }
+
+        .legacy-field {
+            margin-bottom: 20px;
+        }
+
+        .legacy-field:last-child {
+            margin-bottom: 0;
+        }
+
+        .legacy-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #081120;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .legacy-field input,
+        .legacy-field select,
+        .legacy-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 15px;
+            border: 1px solid #d9dee7;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #081120;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .legacy-field textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .legacy-field input:focus,
+        .legacy-field select:focus,
+        .legacy-field textarea:focus {
+            border-color: #c9a227;
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.10);
+        }
+
+        .legacy-helper {
+            margin-top: 8px;
+            color: #8a94a6;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           ASSET SELECTION
+           ========================= */
+
+        .legacy-assets {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legacy-asset-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border: 1px solid rgba(8, 17, 32, 0.08);
+            border-radius: 11px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .legacy-asset-option:hover {
+            border-color: rgba(201, 162, 39, 0.45);
+        }
+
+        .legacy-asset-option input {
+            width: 17px;
+            height: 17px;
+            accent-color: #c9a227;
+        }
+
+        .legacy-asset-option i {
+            color: #c9a227;
+        }
+
+        .legacy-asset-option span {
+            color: #081120;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .no-assets {
+            padding: 18px;
+            border-radius: 10px;
+            background: #f8f9fb;
+            color: #667085;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ACTIONS
+           ========================= */
+
+        .legacy-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .legacy-actions .primary-btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border: 1px solid rgba(8, 17, 32, 0.15);
+            border-radius: 8px;
+            background: transparent;
+            color: #081120;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .secondary-btn:hover {
+            border-color: #c9a227;
+            color: #c9a227;
+        }
+
+
+        /* =========================
+           SAVED STATUS
+           ========================= */
+
+        .legacy-status {
+            display: none;
+            max-width: 900px;
+            margin-bottom: 25px;
+            padding: 18px 20px;
+            border: 1px solid rgba(24, 179, 104, 0.25);
+            border-radius: 12px;
+            background: rgba(24, 179, 104, 0.07);
+            color: #167a4b;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .legacy-status.show {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        /* =========================
+           DARK MODE
+           ========================= */
+
+        body.dark-mode .legacy-page {
+            background: #050b14;
+        }
+
+        body.dark-mode .legacy-page-header h1,
+        body.dark-mode .legacy-card-heading h2,
+        body.dark-mode .legacy-field label,
+        body.dark-mode .legacy-asset-option span {
+            color: #ffffff;
+        }
+
+        body.dark-mode .legacy-page-header p:last-child,
+        body.dark-mode .legacy-helper {
+            color: #a4afbf;
+        }
+
+        body.dark-mode .legacy-card {
+            background: #0b1422;
+            border-color: rgba(201, 162, 39, 0.16);
+        }
+
+        body.dark-mode .legacy-field input,
+        body.dark-mode .legacy-field select,
+        body.dark-mode .legacy-field textarea {
+            background: #07101d;
+            border-color: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+        }
+
+        body.dark-mode .legacy-field input::placeholder,
+        body.dark-mode .legacy-field textarea::placeholder {
+            color: #667085;
+        }
+
+        body.dark-mode .legacy-asset-option {
+            border-color: rgba(255, 255, 255, 0.10);
+        }
+
+        body.dark-mode .legacy-asset-option:hover {
+            border-color: rgba(201, 162, 39, 0.50);
+        }
+
+        body.dark-mode .no-assets {
+            background: #07101d;
+            color: #a4afbf;
+        }
+
+        body.dark-mode .secondary-btn {
+            border-color: rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .legacy-page {
+                padding: 50px 5% 70px;
+            }
+
+            .legacy-card {
+                padding: 22px;
+            }
+
+            .legacy-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+        }
+
+    
