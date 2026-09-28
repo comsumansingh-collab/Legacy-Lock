@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Legacy Plan — LegacyLock</title>
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link rel="stylesheet" href="legacy-plan.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+
+    <header class="dashboard-navbar">
+
+        <a href="dashboard.html" class="dashboard-logo">
+
+            <img
+                src="logo.png"
+                alt="LegacyLock Logo"
+            >
+
+        </a>
+
+
+        <div class="dashboard-actions">
+
+            <button
+                id="legacy-theme-toggle"
+                class="dashboard-theme-toggle"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                ☾
+            </button>
+
+
+            <a
+                href="dashboard.html"
+                class="logout-btn"
+            >
+                Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main class="legacy-page">
+
+
+        <section class="legacy-page-header">
+
+            <p class="dashboard-eyebrow">
+                LEGACY PLAN
+            </p>
+
+            <h1>
+                Prepare your digital handover.
+            </h1>
+
+            <p>
+                Decide who should receive your selected digital assets,
+                when the handover should be considered, and what
+                instructions should be followed.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             SAVED STATUS
+             ========================= -->
+
+        <div
+            id="legacy-status"
+            class="legacy-status"
+        >
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+                Your Legacy Plan has been saved successfully.
+            </span>
+
+        </div>
+
+
+
+        <form
+            id="legacy-plan-form"
+            class="legacy-form"
+        >
+
+
+            <!-- =========================
+                 TRUSTED CONTACT
+                 ========================= -->
+
+            <section class="legacy-card">
+
+                <div class="legacy-card-heading">
+
+                    <div class="legacy-card-icon">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <h2>
+                        Trusted Contact
+                    </h2>
+
+                </div>
+
+
+                <div class="legacy-field">
+
+                    <label for="contact-name">
+                        Contact Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        placeholder="Enter trusted contact name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="legacy-field">
+
+                    <label for="contact-email">
+                        Contact Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        placeholder="contact@example.com"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 INACTIVITY PERIOD
+                 ========================= -->
+
+            <section class="legacy-card">
+
+                <div class="legacy-card-heading">
+
+                    <div class="legacy-card-icon">
+
+                        <i class="fa-solid fa-hourglass-half"></i>
+
+                    </div>
+
+                    <h2>
+                        Inactivity Period
+                    </h2>
+
+                </div>
+
+
+                <div class="legacy-field">
+
+                    <label for="inactivity-period">
+                        Check-in Period
+                    </label>
+
+
+                    <select
+                        id="inactivity-period"
+                        required
+                    >
+
+                        <option value="">
+                            Select inactivity period
+                        </option>
+
+                        <option value="30 days">
+                            30 Days
+                        </option>
+
+                        <option value="60 days">
+                            60 Days
+                        </option>
+
+                        <option value="90 days">
+                            90 Days
+                        </option>
+
+                        <option value="180 days">
+                            180 Days
+                        </option>
+
+                        <option value="365 days">
+                            1 Year
+                        </option>
+
+                        <option value="custom">
+                            Custom
+                        </option>
+
+                    </select>
+
+
+                    <!-- CUSTOM PERIOD -->
+
+                    <div
+                        id="custom-period-box"
+                        style="display: none; margin-top: 15px;"
+                    >
+
+                        <label for="custom-period">
+                            Custom Inactivity Period (Days)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="custom-period"
+                            min="1"
+                            placeholder="Enter number of days"
+                        >
+
+                    </div>
+
+
+                    <p class="legacy-helper">
+                        This prototype uses the selected period to represent
+                        when your planned handover process would be considered.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ASSETS
+                 ========================= -->
+
+            <section class="legacy-card">
+
+                <div class="legacy-card-heading">
+
+                    <div class="legacy-card-icon">
+
+                        <i class="fa-solid fa-vault"></i>
+
+                    </div>
+
+                    <h2>
+                        Assets to Handover
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="legacy-assets"
+                    class="legacy-assets"
+                >
+                    <!-- Assets will appear here -->
+                </div>
+
+
+                <p class="legacy-helper">
+                    Select the digital assets you want to include
+                    in your legacy plan.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 INSTRUCTIONS
+                 ========================= -->
+
+            <section class="legacy-card">
+
+                <div class="legacy-card-heading">
+
+                    <div class="legacy-card-icon">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+                    <h2>
+                        Handover Instructions
+                    </h2>
+
+                </div>
+
+
+                <div class="legacy-field">
+
+                    <label for="handover-instructions">
+                        Your Instructions
+                    </label>
+
+                    <textarea
+                        id="handover-instructions"
+                        placeholder="Write any instructions you want to leave for your trusted contact..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ACTIONS
+                 ========================= -->
+
+            <div class="legacy-actions">
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Save Legacy Plan
+                </button>
+
+
+                <a
+                    href="dashboard.html"
+                    class="secondary-btn"
+                >
+                    Cancel
+                </a>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+    <script src="legacy-plan.js"></script>
+
+</body>
+
+</html>
